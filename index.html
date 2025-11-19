@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scheduled Maintenance</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+          "Helvetica Neue", sans-serif;
+        --bg: #050c1d;
+        --card-bg: rgba(7, 18, 40, 0.85);
+        --accent: #5de0e6;
+        --accent-2: #004aad;
+        --text: #f5f7fb;
+        --muted: #b0b8c9;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at top, #0b1c3d, var(--bg));
+        color: var(--text);
+        padding: 2rem;
+      }
+
+      .card {
+        width: min(540px, 100%);
+        background: var(--card-bg);
+        border-radius: 28px;
+        padding: 2.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        text-align: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(93, 224, 230, 0.15);
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+        margin-bottom: 1.5rem;
+      }
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      h1 {
+        font-size: clamp(2.1rem, 4vw, 2.65rem);
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .schedule {
+        margin: 2rem 0;
+        padding: 1.1rem;
+        border-radius: 20px;
+        border: 1px dashed rgba(255, 255, 255, 0.2);
+        color: var(--text);
+        font-weight: 600;
+        background: rgba(7, 37, 70, 0.4);
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.9rem 1.8rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 600;
+        transition: transform 150ms ease, border-color 150ms ease;
+      }
+
+      .cta:hover {
+        transform: translateY(-1px);
+        border-color: var(--accent);
+      }
+
+      @media (max-width: 520px) {
+        .card {
+          padding: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <span class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="12" cy="12" r="9" opacity="0.35"></circle>
+          <path d="M12 7v5l3 2"></path>
+        </svg>
+        Scheduled Maintenance
+      </span>
+      <h1>Site Under Maintenance</h1>
+      <p>
+        We are currently performing scheduled maintenance on the registration portal.
+        Thanks for your patience while we finish up.
+      </p>
+      <div class="schedule">
+        Back online tomorrow at <strong>7:00&nbsp;AM IST</strong>
+      </div>
+      <p>
+        We apologize for the inconvenience. Please check back at the scheduled time.
+      </p>
+      <a
+        class="cta"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=pdsevent25@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Contact Support
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M7 17L17 7"></path>
+          <path d="M8 7h9v9"></path>
+        </svg>
+      </a>
+    </main>
+  </body>
+</html>
+
